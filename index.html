@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start-box home-box ">
+        <h2>Insructions:</h2>
+        <p> Total 7 questions in the Quiz </p>
+        <button type="button" class="btn"  onclick="startQuiz()"> start Quiz </button>
+    </div>
+    <div class="quiz-box home-box hide">
+        <div class="question-number">
+            <!-- question 1 of 6 -->
+        </div>
+        <div class="question-text">
+            <!-- which month comes right before june? -->
+        </div>
+        <div class="option-container">
+            <!-- <div class="option"> may </div>
+            <div class="option"> july </div>
+            <div class="option"> october </div>
+            <div class="option"> march </div> -->
+        </div>
+        <div class="next-question-btn">
+          <button type="button" class="btn" onclick="next()"> next </button>
+        </div>
+        <div class="ans-indicator">
+            <!-- <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> -->
+        </div>
+    </div>
+
+    <div class="result-box home-box hide">
+        <h1> Quiz result </h1>
+        <table>
+            <tr>
+                <td> Total questions</td>
+                <td><span class="total-questions"></span></td>
+            </tr>
+            <tr>
+                <td> attempted questions</td>
+                <td><span class="attempted-questions"></span></td>
+            </tr>
+            <tr>
+                <td> Correct </td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td> Wrong </td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td> Percentage </td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td> Your total score </td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn" onclick="tryagainquiz()"> Try Again</button>
+        <button type="button" class="btn" onclick="backtohome()"> Back To Home </button>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

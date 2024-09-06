@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'sarif';
+    background: #61dcd0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.home-box.hide{
+    display: none;
+}
+
+.home-box{
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+} 
+
+.home-box::before,
+.home-box::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.home-box h2{
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+.home-box p{
+    font-size: 13px;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 15px;
+    margin-left: 20px;
+}
+
+
+.home-box button{
+   
+    background: #61dcd0;
+    margin-top: 10px;
+    color: #000;
+    border-radius: 20px;
+    width: 30%;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+.quiz-box .question-number,
+.quiz-box .question-text,
+.quiz-box .option-container,
+.quiz-box .next-question-btn,
+.quiz-box .ans-indicator{
+    width: 100%;
+    float: left;
+    
+}
+
+.quiz-box.hide{
+    display: none;
+}
+
+.quiz-box .question-number{
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+    color: #163147;
+}
+.quiz-box .question-text{
+    font-size: 20px;
+    /* color: #0000; */
+    margin-top: 10px;
+    line-height: 25px;
+    font-weight: 500;
+
+}
+.quiz-box .option-container{
+    margin-top: 25px;
+    line-height: 25px;
+}
+.quiz-box .option-container .option{
+     font-size: 18px;
+     font-weight: 500;
+     line-height: 25px;
+     padding: 5px;
+     margin-bottom: 10px;
+     background: #cccccc;
+     border-radius: 5px;
+     align-items: center;
+     cursor: pointer;
+     opacity: 0;
+     animation: fadeIn 0.3s ease forwards;
+     position: relative;
+     overflow: hidden;
+}
+
+.quiz-box .option-container .option.already-answered{
+    pointer-events: none;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.quiz-box .option-container .option .answer::before{
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100;
+  background-color: green;
+  z-index: -1;
+}
+.quiz-box .option-container .option.answer{
+    color: #ffffff;
+}
+.quiz-box .option-container .option.wrong::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100;
+    background-color: red;
+    z-index: -1;
+}
+.quiz-box .option-container .option.wrong{
+    color: #ffffff;
+    background-color: red;
+}
+.quiz-box .option-container .option.answer{
+    color: #ffffff;
+    background-color: green;
+}
+
+.quiz-box .btn{
+    margin: 15px 0;
+}
+
+.quiz-box .ans-indicator{
+    border-top: 1px solid gray;
+}
+
+.quiz-box .ans-indicator div{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background: #cccc;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 4px;
+}
+.quiz-box .ans-indicator div.answer{
+    background-color: green;
+    background-image: url("img/correct.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.quiz-box .ans-indicator div.wrong{
+    background-color: red;
+    background-image: url("img/wrong.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.result-box{
+    text-align: center;
+}
+
+.result-box.hide{
+    display: none;
+}
+.result-box h1{
+    font-size: 36px;
+    line-height: 42px;
+    color: #009688;
+}
+.result-box table{
+    width: 100%;
+    border-collapse:collapse;
+    
+}
+.result-box table td{
+    border:1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    font-size: 16px;
+    border-width: 2px;
+    width: 50%;
+    text-align: left;
+    align-items: center;
+
+}
+.result-box .btn{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.answertest{
+    color: green;
+    background-color: green;
+}
